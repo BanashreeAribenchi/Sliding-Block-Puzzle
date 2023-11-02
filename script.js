@@ -27,13 +27,14 @@ window.onload = function () {
     console.log("Image loaded successfully");
     cutImageIntoPieces.call(img); // Use call to set 'this' explicitly
     canvas.addEventListener("click", move); // Add click event listener
-    // shuffle();
+    shuffle();
   };
+
   function cutImageIntoPieces() {
     console.log("cutImageIntoPieces function is called", this);
 
     // Create Base for Canvas properties
-    board = new Board(this.naturalWidth, this.naturalHeight, 2);
+    board = new Board(this.naturalWidth, this.naturalHeight, 3);
 
     canvas.width = board.width;
     canvas.height = board.height;
@@ -219,18 +220,12 @@ window.onload = function () {
         0,
         this.width,
         this.height,
-        tileX * board.tileWidth,
-        tileY * board.tileHeight,
+        x * board.tileWidth,
+        y * board.tileHeight,
         board.tileWidth,
         board.tileHeight
       );
     };
     imgObj.src = imgURL;
-  }
-
-  function getRowColFromIndex(i) {
-    let row = i % board.rowCols;
-    let col = Math.floor(i / board.rowCols);
-    return { x: row, y: col };
   }
 };
