@@ -103,6 +103,5 @@ This project offers a classic sliding block puzzle experience right in your brow
 
 ## Links
 
-- Slides Link
-- Github repository Link
-- Deployment Link
+- [Github repository Link](https://github.com/BanashreeAribenchi/Sliding-Block-Puzzle)
+- [Deployment Link](https://banashreearibenchi.github.io/Sliding-Block-Puzzle/)
